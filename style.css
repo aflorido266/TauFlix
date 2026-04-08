@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+
+:root {
+  --color-header: #e03c33;
+  --color-adside: #ee8b85;
+  --color-blanco: #ffffff;
+  --color-moradito: rgb(245, 242, 248);
+  --colo-negro: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Barra superior blanca con el logo naranja */
+.top-logo-bar {
+  background-color: white;
+  padding: 10px 5%;
+}
+
+.logo-f5 {
+  display: inline-block;
+  background-color: #ff9800; /* Naranja del logo */
+  color: black;
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.logo-usuario {
+  width: 50px;
+  height: 50px;
+}
+
+/* Contenedor naranja */
+.nav-principal {
+  background-color: var(--color-header);
+  display: flex;
+  flex-direction: column; /* Apila el logo sobre el menú */
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Logo central TauFlix */
+.logo-central img {
+  height: 60px; /* Ajusta según tu imagen */
+  margin-bottom: 20px;
+}
+
+/* Menú de navegación debajo del logo */
+.list-nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.list-nav li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.list-nav li a:hover {
+  color: white; /* Cambio de color al pasar el ratón */
+}
+.peliculas h1 {
+  color: var(--color-header);
+  font-size: larger;
+
+  margin: 1rem;
+}
+.peliculas-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.peliculas-content article {
+  flex: 0 0 200px; /* No crecen, no se encogen, y miden 200px de ancho */
+  text-align: left;
+}
+.peliculas-content a {
+  text-decoration: none;
+  color: var(--color-header);
+}
+
+.peliculas-content img {
+  width: 100%;
+  height: 80%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.pelicula h2 {
+  font-size: medium;
+}
+
+.pelicula p {
+  font-size: xx-small;
+}
+
+.losactores p {
+  color: var(--color-blanco);
+}
+
+.actores h1 {
+  color: var(--color-blanco);
+  text-align: center;
+  font-size: large;
+}
+
+.actores {
+  background-color: var(--colo-negro);
+  display: flex;
+  flex-direction: column; /* El título arriba, las fotos abajo */
+  align-items: center; /* Centra todo el bloque */
+  padding-bottom: 30px;
+}
+
+.actores h1 {
+  margin-bottom: 20px; /* Separa el título "Actores" de las cabezas */
+}
+
+.actores img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50rem;
+  object-fit: cover;
+}
+
+.actriz-1 {
+  display: flex; /* Pone a los actores en fila */
+  flex-wrap: wrap; /* Si hay muchos, saltan a la siguiente línea */
+  justify-content: center; /* Los centra horizontalmente */
+  gap: 70px; /* <--- ESTA ES LA CLAVE: ajusta este número para separarlos más o menos */
+  padding: 20px; /* Espacio interno para que no peguen con el borde negro */
+}
+
+section.series {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+}
+.sidebar-festivales {
+  flex: 0 0 250px; /* No se deforma, siempre mide 250px */
+  background-color: var(--color-adside);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.series-content {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.series-content article.series {
+  width: 220px;
+  text-align: left;
+}
+
+.series-content article.series img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.series-content h2 {
+  width: 100%; /* Ocupa todo el ancho, obligando a las fotos a bajar */
+  text-align: left; /* Lo alinea a la izquierda, justo sobre la primera foto */
+  margin-bottom: 20px; /* Le da aire para que no pegue con las imágenes */
+  color: var(--color-header);
+}
+.series p {
+  font-size: xx-small;
+}
+
+.series-content a {
+  text-decoration: none;
+  color: var(--color-header);
+}
+
+.top-vistos {
+  width: 100;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.redes-sociales img {
+  width: 30px;
+  height: 30px;
+  display: row;
+  justify-content: flex-start;
+}
+/* Para la pagina de las peliculas8/
+
+/* Contenedor principal de la página de detalle */
+.contenedor-detalle {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--colo-negro); /* Fondo oscuro tipo cine */
+  color: var(--color-blanco);
+  border-radius: 15px;
+}
+
+/* Sección superior con Flexbox */
+.info-principal {
+  display: flex;
+  gap: 40px; /* Espacio entre el póster y el texto */
+  flex-wrap: wrap; /* Para que en móviles se ponga uno debajo de otro */
+  align-items: flex-start;
+}
+
+/* Estilo del póster en el detalle */
+.poster-detalle {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  object-fit: cover;
+}
+
+/* Columna de texto */
+.texto-detalle {
+  flex: 1; /* Ocupa todo el espacio restante */
+  min-width: 300px;
+}
+
+.texto-detalle h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--color-header);
+}
+
+.sinopsis {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Lista de datos (Director, Año, etc.) */
+.datos {
+  list-style: none;
+  padding: 0;
+}
+
+.datos li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.datos li strong {
+  color: var(--color-header);
+  margin-right: 10px;
+}
+
+/* Botón para volver atrás */
+.boton-volver {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 10px 25px;
+  background-color: #333;
+  color: var(--color-blanco);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.boton-volver:hover {
+  background-color: var(--color-header);
+  color: black;
+}
+
+.contenedor-formulario {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  color: var(--color-header);
+}
+
+.contenedor-formulario h1 {
+  color:var(--color-header);
+  text-align: center;
+}
+
+.grupo-input {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-input label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Inputs de texto, email y select */
+.grupo-input input[type="text"],
+.grupo-input input[type="email"],
+.grupo-input select,
+.grupo-input textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #2b2b2b;
+  color: var(--color-blanco);
+  font-size: 1rem;
+}
+
+/* Opciones de Radio y Checkbox alineadas */
+.opciones-inline,
+.opciones-check {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.boton-enviar {
+  width: 100%;
+  padding: 15px;
+  background: var(--color-header); /* <--- Faltaba el punto y coma aquí */
+  border: none;
+  border-radius: 5px;
+  color: var(--color-blanco);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+.boton-enviar:hover {
+  
+  background: var(--color-blanco); 
+}
+
+.enlace-volver {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
+  text-decoration: none;
+}

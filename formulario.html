@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TauFlix - Registro y Encuesta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h1>Únete a la comunidad</h1>
+        <p>Cuéntanos qué te parece la web o date de alta para recibir novedades.</p>
+
+        <!-- Usamos método GET como pide el ejercicio -->
+        <form action="#" method="GET" class="formulario-cine">
+            
+            <!-- 1. Texto (Nombre) -->
+            <div class="grupo-input">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+            </div>
+
+            <!-- 2. Email -->
+            <div class="grupo-input">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="tu@email.com" required>
+            </div>
+
+            <!-- 3. Radio Buttons (Género favorito) -->
+            <div class="grupo-input">
+                <label>¿Cuál es tu género favorito?</label>
+                <div class="opciones-inline">
+                    <input type="radio" id="accion" name="genero" value="accion">
+                    <label for="accion">Acción</label>
+                    
+                    <input type="radio" id="drama" name="genero" value="drama">
+                    <label for="drama">Drama</label>
+                    
+                    <input type="radio" id="comedia" name="genero" value="comedia">
+                    <label for="comedia">Comedia</label>
+                </div>
+            </div>
+
+            <!-- 4. Select (Frecuencia) -->
+            <div class="grupo-input">
+                <label for="frecuencia">¿Con qué frecuencia ves cine?</label>
+                <select id="frecuencia" name="frecuencia">
+                    <option value="diario">A diario</option>
+                    <option value="semanal">Fines de semana</option>
+                    <option value="ocasional">Una vez al mes</option>
+                </select>
+            </div>
+
+            <!-- 5. Checkbox (Intereses) -->
+            <div class="grupo-input">
+                <label>Deseo recibir información sobre:</label>
+                <div class="opciones-check">
+                    <input type="checkbox" id="estrenos" name="interes" value="estrenos">
+                    <label for="estrenos">Nuevos estrenos</label>
+                    
+                    <input type="checkbox" id="ofertas" name="interes" value="ofertas">
+                    <label for="ofertas">Ofertas especiales</label>
+                </div>
+            </div>
+
+            <!-- 6. Textarea (Comentarios) -->
+            <div class="grupo-input">
+                <label for="mensaje">Tu opinión nos importa:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu comentario..."></textarea>
+            </div>
+
+            <button type="submit" class="boton-enviar">Enviar Registro</button>
+            <a href="index.html" class="enlace-volver">Volver al inicio</a>
+        </form>
+    </div>
+</body>
+</html>
